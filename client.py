@@ -62,4 +62,4 @@ if __name__ == "__main__":
             print(
                 f"Quoted {stock} at (bid:{bid_price}, ask:{ask_price}, price:{price})")
 
-        print("Ratio", getRatio(prices[""], prices["DEF"]))
+        print("Ratio", getRatio(prices["ABC"], prices["DEF"]))
