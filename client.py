@@ -55,9 +55,11 @@ if __name__ == "__main__":
             QUERY.format(random.random())).read())
 
         """ ----------- Update to get the ratio --------------- """
+        prices = {}
         for quote in quotes:
             stock, bid_price, ask_price, price = getDataPoint(quote)
+            prices[stock] = price
             print(
                 f"Quoted {stock} at (bid:{bid_price}, ask:{ask_price}, price:{price})")
 
-        print(f"Ratio {getRatio(price, price)}")
+        print("Ratio", getRatio(prices[""], prices["DEF"]))
